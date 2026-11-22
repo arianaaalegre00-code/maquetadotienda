@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-label="Ilustración de una cuchara de madera artesanal">
+  <rect width="800" height="800" fill="#F6ECDF"/>
+  <circle cx="400" cy="400" r="290" fill="#E8D6C0"/>
+  <ellipse cx="480" cy="600" rx="120" ry="26" fill="#7A5231" opacity=".16"/>
+  <g transform="rotate(-28 400 400)">
+    <ellipse cx="400" cy="272" rx="80" ry="112" fill="#B98254"/>
+    <ellipse cx="400" cy="272" rx="62" ry="92" fill="#D2A476"/>
+    <path d="M368 356h64v262a32 32 0 0 1-64 0V356Z" fill="#C99567"/>
+    <path d="M380 380v222" fill="none" stroke="#E5C096" stroke-width="10" stroke-linecap="round" opacity=".7"/>
+    <circle cx="400" cy="588" r="13" fill="#F6ECDF"/>
+    <circle cx="400" cy="272" r="34" fill="#B98254" opacity=".35"/>
+  </g>
+  <g fill="none" stroke="#B69A78" stroke-width="7" stroke-linecap="round" opacity=".6">
+    <path d="M196 210c28 12 52 12 78 0"/><path d="M586 588c26 10 48 10 72 0"/>
+  </g>
+</svg>

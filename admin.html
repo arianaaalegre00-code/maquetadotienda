@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fbf7f0">
+  <meta name="description" content="Panel privado para administrar el catálogo de artesanías.">
+  <title>Panel administrador · Artesanías</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- =========================================================
+       LOGIN: se muestra hasta que Supabase confirme la sesión.
+       El panel queda oculto mientras no se ingrese.
+       ========================================================= -->
+  <section class="login" id="login-panel">
+    <div class="login__caja">
+      <div class="login__icono" aria-hidden="true">✿</div>
+      <h1 class="login__texto">Panel administrador</h1>
+      <p class="login__subtitulo">Ingresá con el email y la contraseña de la dueña para administrar el catálogo.</p>
+
+      <form id="formulario-login" novalidate>
+        <div class="campo">
+          <label for="login-email">Email</label>
+          <input id="login-email" type="email" autocomplete="username" placeholder="dueña@ejemplo.com" required>
+        </div>
+        <div class="campo">
+          <label for="login-password">Contraseña</label>
+          <input id="login-password" type="password" autocomplete="current-password" placeholder="••••••••" required>
+        </div>
+        <div id="login-error" class="mensaje mensaje--error oculto" role="alert" aria-live="assertive"></div>
+        <button class="btn btn--primario btn--block" type="submit">Ingresar</button>
+      </form>
+
+      <a class="login__volver" href="index.html">← Volver a la tienda</a>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       PANEL: solo se muestra cuando hay sesión iniciada.
+       ========================================================= -->
+  <div id="admin-app" class="oculto">
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="marca" href="index.html" aria-label="Ir a la tienda">
+          <span class="marca__icono" aria-hidden="true">✿</span>
+          <span class="marca__texto">
+            <span class="marca__nombre" data-marca>Manos de Tierra</span>
+            <span class="marca__lema">Panel administrador</span>
+          </span>
+        </a>
+        <nav class="header-acciones" aria-label="Acciones del panel">
+          <span class="admin-usuario" id="usuario-actual"></span>
+          <a class="btn btn--suave btn--chip" href="index.html">← Ver tienda</a>
+          <button class="btn btn--peligro btn--chip" id="btn-cerrar-sesion" type="button">Cerrar sesión</button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="admin-main">
+      <div class="contenedor">
+
+        <div class="admin-cabecera">
+          <div>
+            <h1>Administrar productos</h1>
+            <p>Cargá piezas nuevas, cambiá precios o marcá algo como sin stock. Los cambios se ven en la tienda al instante.</p>
+          </div>
+          <button class="btn btn--suave btn--chip" id="btn-recargar" type="button">↻ Recargar lista</button>
+        </div>
+
+        <section class="stats" aria-label="Resumen">
+          <div class="stat"><strong id="stat-total">0</strong><span>Productos</span></div>
+          <div class="stat"><strong id="stat-disponibles">0</strong><span>Disponibles</span></div>
+          <div class="stat"><strong id="stat-sin-stock">0</strong><span>Sin stock</span></div>
+        </section>
+
+        <div class="admin-layout">
+
+          <!-- Formulario -->
+          <section class="panel" aria-labelledby="form-titulo">
+            <h2 class="panel__titulo" id="form-titulo">Agregar producto</h2>
+            <p class="panel__subtitulo" id="form-subtitulo">Completá los datos y tocá “Publicar producto”.</p>
+
+            <form id="formulario-producto" novalidate>
+              <input type="hidden" id="producto-id" name="id">
+
+              <div class="campo">
+                <label for="campo-nombre">Nombre del producto *</label>
+                <input id="campo-nombre" name="nombre" type="text" placeholder="Ej: Taza Terracota" required maxlength="80">
+              </div>
+
+              <div class="campo--fila">
+                <div class="campo">
+                  <label for="campo-categoria">Categoría *</label>
+                  <select id="campo-categoria" name="categoria" required></select>
+                </div>
+                <div class="campo">
+                  <label for="campo-precio">Precio ($) *</label>
+                  <input id="campo-precio" name="precio" type="number" min="0" step="100" placeholder="18500" required>
+                </div>
+              </div>
+
+              <div class="campo">
+                <label for="campo-descripcion">Descripción corta</label>
+                <textarea id="campo-descripcion" name="descripcion" maxlength="220" placeholder="Contá algo breve: material, tamaño, color..."></textarea>
+              </div>
+
+              <div class="campo">
+                <label for="campo-imagen-url">Enlace de la imagen (opcional)</label>
+                <input id="campo-imagen-url" type="url" placeholder="https://... o assets/productos/taza-ceramica.svg">
+                <small>Si subís un archivo, ese se usa en lugar del enlace.</small>
+              </div>
+
+              <div class="campo">
+                <label for="campo-imagen-archivo">O subí una foto desde el celular o la compu</label>
+                <div class="imagen-carga">
+                  <img class="vista-previa" id="vista-previa" src="assets/productos/generico.svg" alt="Vista previa de la imagen">
+                  <input id="campo-imagen-archivo" type="file" accept="image/png,image/jpeg,image/webp">
+                </div>
+                <small>La vista previa se muestra antes de publicar. Tamaño máximo: 8 MB.</small>
+              </div>
+
+              <div class="campo">
+                <label for="campo-estado">Estado *</label>
+                <select id="campo-estado" name="estado" required>
+                  <option value="disponible">Disponible</option>
+                  <option value="sin-stock">Sin stock</option>
+                </select>
+              </div>
+
+              <!-- Cartel de éxito / error del formulario -->
+              <div id="mensaje-formulario" class="mensaje oculto" role="status" aria-live="polite"></div>
+
+              <div class="formulario-acciones">
+                <button class="btn btn--primario" id="btn-guardar" type="submit">Publicar producto</button>
+                <button class="btn btn--suave oculto" id="btn-cancelar-editar" type="button">Cancelar edición</button>
+              </div>
+            </form>
+          </section>
+
+          <!-- Lista -->
+          <section class="panel" aria-labelledby="lista-titulo">
+            <h2 class="panel__titulo" id="lista-titulo">Productos cargados</h2>
+            <p class="panel__subtitulo">Usá los botones de cada tarjeta para editar, cambiar el estado o eliminar.</p>
+            <div class="lista" id="lista-productos-admin"></div>
+          </section>
+
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <noscript>
+    <p style="padding:16px;background:#fff6e8;text-align:center">
+      Este panel necesita JavaScript para iniciar sesión y administrar los productos.
+    </p>
+  </noscript>
+
+  <!-- Orden de carga: configuración → CDN → cliente → textos → lógica -->
+  <script src="config.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+  <script src="js/supabase.js"></script>
+  <script src="js/datos.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

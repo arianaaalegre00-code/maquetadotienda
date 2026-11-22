@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-label="Ilustración de un panel decorativo de macramé">
+  <rect width="800" height="800" fill="#F4EADD"/>
+  <circle cx="400" cy="400" r="290" fill="#E7D6C3"/>
+  <circle cx="400" cy="232" r="72" fill="none" stroke="#A97247" stroke-width="22"/>
+  <g stroke="#E8D8BE" stroke-width="10" stroke-linecap="round" fill="none">
+    <path d="M352 288v92"/><path d="M448 288v92"/><path d="M380 296v84"/><path d="M420 296v84"/>
+  </g>
+  <path d="M300 380c50 26 100 26 100 26s50 0 100-26" fill="none" stroke="#E8D8BE" stroke-width="10" stroke-linecap="round"/>
+  <path d="M300 380c0 90 20 150 44 196M500 380c0 90-20 150-44 196" fill="none" stroke="#E8D8BE" stroke-width="10" stroke-linecap="round"/>
+  <path d="M344 406c-10 38-10 64 0 92M456 406c10 38 10 64 0 92" fill="none" stroke="#E8D8BE" stroke-width="10" stroke-linecap="round"/>
+  <path d="M400 408v184" stroke="#E8D8BE" stroke-width="10" stroke-linecap="round"/>
+  <g fill="#EFE2CE">
+    <circle cx="300" cy="380" r="13"/><circle cx="400" cy="408" r="13"/><circle cx="500" cy="380" r="13"/>
+    <circle cx="344" cy="408" r="11"/><circle cx="456" cy="408" r="11"/>
+    <circle cx="344" cy="576" r="11"/><circle cx="400" cy="592" r="11"/><circle cx="456" cy="576" r="11"/>
+  </g>
+  <g stroke="#E8D8BE" stroke-width="7" stroke-linecap="round">
+    <path d="M290 390l-10 90"/><path d="M312 396l-6 96"/><path d="M334 410l-4 92"/>
+    <path d="M466 410l4 92"/><path d="M488 396l6 96"/><path d="M510 390l10 90"/>
+    <path d="M380 600l-6 76"/><path d="M400 604v80"/><path d="M420 600l6 76"/>
+  </g>
+  <path d="M400 452a26 26 0 1 0 0 52 34 34 0 1 1 0-52Z" fill="#D8B98F" opacity=".9"/>
+  <g fill="#CBB69A" opacity=".7"><circle cx="206" cy="264" r="7"/><circle cx="606" cy="556" r="9"/></g>
+</svg>

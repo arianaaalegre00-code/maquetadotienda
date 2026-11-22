@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-label="Ilustración de una tabla de cortar de madera">
+  <rect width="800" height="800" fill="#F2E8D8"/>
+  <circle cx="400" cy="400" r="290" fill="#E5D2B8"/>
+  <ellipse cx="410" cy="630" rx="190" ry="30" fill="#7A5231" opacity=".18"/>
+  <g transform="rotate(-8 400 410)">
+    <rect x="244" y="242" width="312" height="350" rx="46" fill="#9C6A43"/>
+    <rect x="262" y="260" width="276" height="314" rx="34" fill="#C08B5C"/>
+    <g fill="none" stroke="#A87448" stroke-width="7" stroke-linecap="round" opacity=".55">
+      <path d="M300 320c40 18 84 18 128 0"/><path d="M292 386c52 22 116 22 172 0"/>
+      <path d="M300 470c44 18 92 16 138-4"/><path d="M330 534c34 10 68 8 100-6"/>
+    </g>
+    <circle cx="400" cy="300" r="24" fill="#F2E8D8"/>
+    <circle cx="400" cy="300" r="14" fill="#9C6A43"/>
+    <path d="M282 278c0 100 2 178 10 252" fill="none" stroke="#DFB68A" stroke-width="12" stroke-linecap="round" opacity=".5"/>
+  </g>
+  <g fill="#B99B76" opacity=".7"><circle cx="200" cy="250" r="7"/><circle cx="620" cy="560" r="9"/><circle cx="612" cy="230" r="5"/></g>
+</svg>

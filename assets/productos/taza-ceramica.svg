@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-label="Ilustración de una taza de cerámica terracota">
+  <rect width="800" height="800" fill="#F7EDE1"/>
+  <circle cx="400" cy="390" r="288" fill="#EFD9C6"/>
+  <ellipse cx="390" cy="600" rx="205" ry="32" fill="#A55B3B" opacity=".18"/>
+  <path d="M498 348c92-16 104 122 4 124" fill="none" stroke="#C96F4A" stroke-width="36" stroke-linecap="round"/>
+  <path d="M275 298h214v188a76 76 0 0 1-76 76h-62a76 76 0 0 1-76-76V298Z" fill="#C96F4A"/>
+  <path d="M292 320h180v166a58 58 0 0 1-58 58h-64a58 58 0 0 1-58-58V320Z" fill="#D9845E" opacity=".65"/>
+  <ellipse cx="382" cy="298" rx="107" ry="28" fill="#EBA985"/>
+  <ellipse cx="382" cy="298" rx="88" ry="17" fill="#9D4E31"/>
+  <path d="M310 360c0 74 4 120 18 160" fill="none" stroke="#F5C4A6" stroke-width="14" stroke-linecap="round" opacity=".65"/>
+  <g fill="#8F452C" opacity=".55">
+    <circle cx="420" cy="392" r="7"/><circle cx="452" cy="418" r="5"/><circle cx="408" cy="440" r="4"/>
+  </g>
+  <g fill="none" stroke="#B98A6B" stroke-width="9" stroke-linecap="round" opacity=".7">
+    <path d="M350 230c-16-24 14-34-2-60"/><path d="M400 216c-16-24 14-34-2-60"/><path d="M450 232c-16-24 14-34-2-60"/>
+  </g>
+  <g fill="#D8B79B" opacity=".75"><circle cx="210" cy="260" r="7"/><circle cx="600" cy="540" r="9"/><circle cx="248" cy="580" r="5"/></g>
+</svg>

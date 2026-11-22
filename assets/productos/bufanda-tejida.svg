@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-label="Ilustración de una bufanda tejida">
+  <rect width="800" height="800" fill="#F3E9DE"/>
+  <circle cx="400" cy="400" r="290" fill="#E7D5C4"/>
+  <ellipse cx="400" cy="620" rx="210" ry="26" fill="#8B6A52" opacity=".14"/>
+  <path d="M232 250c104-50 190 34 306-18l36 118c-120 58-204-24-310 24l-32-124Z" fill="#C98B6B"/>
+  <path d="M244 300c96-42 178 36 286-14l16 54c-112 52-194-26-288 20l-14-60Z" fill="#E3B393" opacity=".8"/>
+  <g fill="none" stroke="#A96C4C" stroke-width="8" opacity=".6">
+    <path d="M292 238l22 118"/><path d="M372 254l20 112"/><path d="M456 256l18 96"/><path d="M536 240l14 84"/>
+  </g>
+  <g fill="none" stroke="#F2D9C4" stroke-width="6" opacity=".8">
+    <path d="M330 246l20 116"/><path d="M414 256l18 106"/><path d="M498 250l16 92"/>
+  </g>
+  <g stroke="#B87B5A" stroke-width="6" stroke-linecap="round">
+    <path d="M250 372v56"/><path d="M276 362v58"/><path d="M302 352v54"/><path d="M328 342v52"/>
+    <path d="M510 338v52"/><path d="M536 346v54"/><path d="M562 356v58"/><path d="M588 366v58"/>
+  </g>
+  <g fill="#C9B29A" opacity=".7"><circle cx="196" cy="220" r="7"/><circle cx="612" cy="548" r="9"/></g>
+</svg>

@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fbf7f0">
+  <meta name="description" content="Artesanías hechas a mano: cerámica, madera, tejidos y decoración. Pedidos por WhatsApp.">
+  <title>Manos de Tierra · Artesanías</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="marca" href="#inicio" aria-label="Ir al inicio">
+        <span class="marca__icono" aria-hidden="true">✿</span>
+        <span class="marca__texto">
+          <span class="marca__nombre" data-marca>Manos de Tierra</span>
+          <span class="marca__lema" data-lema>Hecho a mano, con calma</span>
+        </span>
+      </a>
+      <!-- El panel NO se muestra en la vista de clientes.
+           La dueña accede escribiendo admin.html en la barra de direcciones. -->
+      <nav class="header-acciones" aria-label="Acciones principales">
+        <a class="btn btn--whatsapp btn--chip" data-whatsapp href="#">WhatsApp</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inicio">
+
+    <section class="hero">
+      <div class="contenedor hero__inner">
+        <div>
+          <span class="hero__badge">Pequeña producción · hecho a mano</span>
+          <h1>Objetos con <em>alma</em> para tu día a día</h1>
+          <p class="hero__texto" data-descripcion>
+            Cerámica, madera, tejidos y pequeños detalles para tu casa. Cada pieza está hecha con las manos y con tiempo.
+          </p>
+          <div class="hero__acciones">
+            <a class="btn btn--primario" href="#catalogo">Ver catálogo ↓</a>
+            <a class="btn btn--secundario" data-whatsapp href="#">Escribinos por WhatsApp</a>
+          </div>
+          <p class="hero__nota">Sin pagos online: elegí, armá tu pedido y lo coordinamos por mensaje.</p>
+        </div>
+        <div class="hero__arte" aria-hidden="true">
+          <img src="assets/productos/jarron-arcilla.svg" alt="">
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion" id="catalogo">
+      <div class="contenedor">
+        <div class="seccion__cabecera">
+          <div>
+            <h2 class="seccion__titulo">Nuestro catálogo</h2>
+            <p class="seccion__subtitulo">Elegí por categoría o buscá lo que te gusta.</p>
+          </div>
+          <div class="buscador">
+            <span class="buscador__icono" aria-hidden="true">🔍</span>
+            <label class="oculto" for="buscador">Buscar productos</label>
+            <input id="buscador" type="search" placeholder="Buscar una taza, madera, vela..." autocomplete="off">
+          </div>
+        </div>
+
+        <div class="filtros" id="lista-categorias" role="group" aria-label="Filtrar por categoría"></div>
+        <p class="resultados" id="cantidad-resultados" aria-live="polite"></p>
+
+        <div class="productos" id="grilla-productos"></div>
+
+        <div class="estado-vacio oculto" id="estado-vacio">
+          <h3>No encontramos productos</h3>
+          <p>Probá con otra palabra o mirá todo el catálogo.</p>
+          <button class="btn btn--suave" id="btn-ver-todo" type="button">Ver todo el catálogo</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="pasos">
+      <div class="contenedor seccion">
+        <div class="seccion__cabecera">
+          <div>
+            <h2 class="seccion__titulo">¿Cómo pedir?</h2>
+            <p class="seccion__subtitulo">Es muy simple, tres pasos.</p>
+          </div>
+        </div>
+        <div class="pasos__grid">
+          <article class="paso">
+            <div class="paso__numero">1</div>
+            <h3>Elegí tus piezas</h3>
+            <p>Recorré el catálogo y agregá al pedido lo que te guste. Cada pieza es única.</p>
+          </article>
+          <article class="paso">
+            <div class="paso__numero">2</div>
+            <h3>Armá el mensaje</h3>
+            <p>Toquá “Enviar pedido” y se abre WhatsApp con el resumen listo para vos.</p>
+          </article>
+          <article class="paso">
+            <div class="paso__numero">3</div>
+            <h3>Coordinamos</h3>
+            <p>Confirmamos stock, entrega y forma de pago. Sin pagos online ni sorpresas.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="contenedor">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__marca" data-marca>Manos de Tierra</div>
+          <p class="footer__texto" data-descripcion></p>
+        </div>
+        <div>
+          <p class="footer__titulo">Contacto</p>
+          <ul class="footer__lista">
+            <li><a data-whatsapp href="#">WhatsApp: <span data-telefono></span></a></li>
+            <li><a data-email href="#"><span data-email-texto></span></a></li>
+            <li><span data-localidad></span></li>
+            <li><span data-horarios></span></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__titulo">Redes sociales</p>
+          <ul class="footer__lista">
+            <li><a data-red="instagram" href="#" target="_blank" rel="noopener">Instagram ↗</a></li>
+            <li><a data-red="facebook" href="#" target="_blank" rel="noopener">Facebook ↗</a></li>
+            <li><a data-red="tiktok" href="#" target="_blank" rel="noopener">TikTok ↗</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span id="anio-footer">2026</span> <span data-marca>Manos de Tierra</span>. Todos los derechos reservados.</span>
+        <span>Hecho con cariño · Pedidos por WhatsApp</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Carrito simple -->
+  <button class="carrito-flotante" id="btn-carrito-flotante" type="button" aria-label="Ver pedido">
+    <span aria-hidden="true">🧺</span>
+    <span>Mi pedido</span>
+    <span class="carrito-flotante__badge" id="carrito-contador">0</span>
+  </button>
+
+  <div class="overlay" id="overlay-carrito"></div>
+
+  <aside class="carrito" id="carrito-panel" role="dialog" aria-modal="true" aria-labelledby="carrito-titulo" aria-hidden="true">
+    <div class="carrito__cabecera">
+      <h2 id="carrito-titulo">Mi pedido</h2>
+      <button class="cerrar" id="btn-cerrar-carrito" type="button" aria-label="Cerrar pedido">×</button>
+    </div>
+    <div class="carrito__items" id="carrito-items"></div>
+    <div class="carrito__pie">
+      <div class="carrito__total">
+        <span>Total estimado</span>
+        <strong id="carrito-total">$0</strong>
+      </div>
+      <button class="btn btn--whatsapp btn--block" id="btn-enviar-pedido" type="button">Enviar pedido por WhatsApp</button>
+      <p class="carrito__nota">El total es orientativo. La disponibilidad, entrega y pago se confirman por WhatsApp.</p>
+    </div>
+  </aside>
+
+  <noscript>
+    <p style="padding:16px;background:#fff6e8;text-align:center">
+      Esta maqueta necesita JavaScript para mostrar los productos y armar el mensaje de WhatsApp.
+    </p>
+  </noscript>
+
+  <!-- 1) Configuración (la dueña solo edita este archivo) -->
+  <script src="config.js"></script>
+  <!-- 2) Librería de Supabase desde CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+  <!-- 3) Cliente de Supabase y textos fijos -->
+  <script src="js/supabase.js"></script>
+  <script src="js/datos.js"></script>
+  <!-- 4) Lógica de la tienda -->
+  <script src="js/tienda.js"></script>
+</body>
+</html>
